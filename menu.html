@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu · FoodHub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="FoodHub home">
+          <div class="brand-mark">
+            <div class="brand-mark-inner">FH</div>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">FoodHub</span>
+            <span class="brand-tagline">Nightly cravings, delivered</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link active">Menu</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="cart.html" class="nav-cart">
+            <span class="nav-cart-icon">🛒</span>
+            <span>Cart</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <h1 class="section-title">Tonight’s menu</h1>
+            <p class="section-subtitle">
+              Hand-picked dishes from our favorite local kitchens.
+            </p>
+          </div>
+          <div class="stack-sm text-right">
+            <span class="badge-soft">Delivering within 30–45 minutes</span>
+            <span class="muted">All prices include tax · no hidden fees</span>
+          </div>
+        </header>
+
+        <div class="pill-row">
+          <span class="pill">Bowls</span>
+          <span class="pill">Burgers</span>
+          <span class="pill">Plant-based</span>
+          <span class="pill">Comfort</span>
+          <span class="pill">Late-night snacks</span>
+        </div>
+
+        <section class="section" aria-label="Menu items">
+          <div class="menu-grid" data-menu-grid>
+            <!-- Bowls -->
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Spicy Gochujang Bowl</h2>
+                <span class="card-tag">Best seller</span>
+              </div>
+              <p class="card-desc">
+                Glazed chicken, jasmine rice, pickled cucumber, sesame slaw, and
+                a slow-burn gochujang drizzle.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$13.50 <span>/ bowl</span></div>
+                  <span class="muted">Medium heat · contains sesame</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="bowl-gochujang"
+                  data-name="Spicy Gochujang Bowl"
+                  data-price="13.5"
+                  data-category="Bowl"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Green Goddess Grain Bowl</h2>
+                <span class="card-tag">Plant-based</span>
+              </div>
+              <p class="card-desc">
+                Quinoa, roasted sweet potato, charred broccoli, avocado, crunchy
+                chickpeas, and herby tahini dressing.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$12.20 <span>/ bowl</span></div>
+                  <span class="muted">Vegan · high protein</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="bowl-goddess"
+                  data-name="Green Goddess Grain Bowl"
+                  data-price="12.2"
+                  data-category="Bowl"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Burgers -->
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Truffle Smash Burger</h2>
+                <span class="card-tag">New</span>
+              </div>
+              <p class="card-desc">
+                Double smashed patty, caramelized onions, truffle aioli, and
+                cheddar on a toasted brioche bun.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$14.90 <span>/ burger</span></div>
+                  <span class="muted">Served with crispy fries</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="burger-truffle"
+                  data-name="Truffle Smash Burger"
+                  data-price="14.9"
+                  data-category="Burger"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Classic Double Cheeseburger</h2>
+              </div>
+              <p class="card-desc">
+                Two beef patties, American cheese, dill pickles, lettuce, and
+                special sauce on a sesame bun.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$12.80 <span>/ burger</span></div>
+                  <span class="muted">Add-on: extra cheese +$1.50</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="burger-classic-double"
+                  data-name="Classic Double Cheeseburger"
+                  data-price="12.8"
+                  data-category="Burger"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Comfort -->
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Five-Cheese Mac &amp; Cheese</h2>
+              </div>
+              <p class="card-desc">
+                Cheddar, gruyère, fontina, mozzarella, and parmesan finished
+                with a garlic herb crumb.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$11.40 <span>/ bowl</span></div>
+                  <span class="muted">Add crispy chicken +$4.50</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="comfort-mac"
+                  data-name="Five-Cheese Mac & Cheese"
+                  data-price="11.4"
+                  data-category="Comfort"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Buttermilk Fried Chicken Box</h2>
+              </div>
+              <p class="card-desc">
+                Crispy buttermilk fried chicken, waffle fries, dill slaw, and
+                house-made hot honey.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$15.30 <span>/ box</span></div>
+                  <span class="muted">Feeds one very hungry human</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="comfort-fried-chicken"
+                  data-name="Buttermilk Fried Chicken Box"
+                  data-price="15.3"
+                  data-category="Comfort"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Snacks & Desserts -->
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Loaded Street Fries</h2>
+              </div>
+              <p class="card-desc">
+                Crispy fries topped with queso, jalapeños, scallions, and a
+                smoky chipotle crema.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$9.90 <span>/ share</span></div>
+                  <span class="muted">Perfect for two</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="snack-fries"
+                  data-name="Loaded Street Fries"
+                  data-price="9.9"
+                  data-category="Snack"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-header-row">
+                <h2 class="card-title">Midnight Chocolate Lava Cake</h2>
+              </div>
+              <p class="card-desc">
+                Warm molten chocolate cake with vanilla bean cream and cocoa
+                nib crunch.
+              </p>
+              <div class="card-footer-row">
+                <div class="stack-sm">
+                  <div class="price">$8.40 <span>/ cake</span></div>
+                  <span class="muted">Best paired with something salty</span>
+                </div>
+                <button
+                  class="btn-add"
+                  type="button"
+                  data-add-to-cart
+                  data-id="dessert-lava-cake"
+                  data-name="Midnight Chocolate Lava Cake"
+                  data-price="8.4"
+                  data-category="Dessert"
+                >
+                  <span>＋</span>
+                  <span>Add</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="card-surface">
+            <div class="cart-summary">
+              <div class="cart-note">
+                Items stay in your cart as you browse. When you’re ready, head
+                to checkout to confirm delivery details.
+              </div>
+              <div class="cart-summary-right">
+                <a href="cart.html" class="btn-outline">View cart &amp; total</a>
+                <a href="checkout.html" class="link-muted">Skip ahead to checkout</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© <span id="year-menu"></span> FoodHub. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html">Cart</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year-menu").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
