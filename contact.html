@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact · FoodHub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="FoodHub home">
+          <div class="brand-mark">
+            <div class="brand-mark-inner">FH</div>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">FoodHub</span>
+            <span class="brand-tagline">Nightly cravings, delivered</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+          <a href="cart.html" class="nav-cart">
+            <span class="nav-cart-icon">🛒</span>
+            <span>Cart</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <h1 class="section-title">Contact &amp; support</h1>
+            <p class="section-subtitle">
+              Questions about an order or thinking about partnering with us?
+            </p>
+          </div>
+          <div class="stack-sm text-right">
+            <span class="badge-soft">Support available 5pm – 2am daily</span>
+            <span class="muted">Typical response time under 10 minutes</span>
+          </div>
+        </header>
+
+        <section class="contact-grid section">
+          <aside class="contact-card-list">
+            <article class="contact-card">
+              <span class="contact-label">Live order help</span>
+              <span class="contact-value">support@foodhub.app</span>
+              <p class="contact-note">
+                For issues with a current delivery, missing items, or billing
+                questions, email us with your order ID.
+              </p>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-label">Partner with FoodHub</span>
+              <span class="contact-value">partners@foodhub.app</span>
+              <p class="contact-note">
+                Independent kitchen or brand interested in joining our curated
+                roster? Tell us about your concept.
+              </p>
+            </article>
+
+            <article class="contact-card">
+              <span class="contact-label">Rider support</span>
+              <span class="contact-value">riders@foodhub.app</span>
+              <p class="contact-note">
+                Existing or prospective rider with questions? We’re here to
+                help.
+              </p>
+            </article>
+          </aside>
+
+          <section class="card-surface">
+            <h2 class="section-title">Send us a message</h2>
+            <p class="section-subtitle">
+              This form is for general questions. For active orders, please use
+              the support email above so we can prioritize it.
+            </p>
+
+            <form class="mt-md">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="c-name">Name</label>
+                  <input
+                    id="c-name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Teena Jain"
+                  />
+                </div>
+                <div class="field">
+                  <label for="c-email">Email</label>
+                  <input
+                    id="c-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="teena@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="mt-md">
+                <div class="field">
+                  <label for="c-topic">Topic</label>
+                  <select id="c-topic" name="topic" required>
+                    <option value="">Choose a topic</option>
+                    <option value="order">Order question</option>
+                    <option value="partnership">Partnership inquiry</option>
+                    <option value="feedback">Product feedback</option>
+                    <option value="other">Something else</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mt-md">
+                <div class="field">
+                  <label for="c-message">Message</label>
+                  <textarea
+                    id="c-message"
+                    name="message"
+                    required
+                    placeholder="Share any context that will help us help you faster."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <div class="form-helper">
+                  <div>
+                    We usually respond within 10–20 minutes during active
+                    service hours.
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn-outline"
+                  onclick="event.preventDefault(); alert('Thanks for reaching out! This demo captures your message client-side only.');"
+                >
+                  <span>Send message</span>
+                </button>
+              </div>
+            </form>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© <span id="year-contact"></span> FoodHub. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="cart.html">Cart</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year-contact").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
