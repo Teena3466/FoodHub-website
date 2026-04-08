@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout · FoodHub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="FoodHub home">
+          <div class="brand-mark">
+            <div class="brand-mark-inner">FH</div>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">FoodHub</span>
+            <span class="brand-tagline">Nightly cravings, delivered</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="cart.html" class="nav-cart">
+            <span class="nav-cart-icon">🛒</span>
+            <span>Cart</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <h1 class="section-title">Checkout</h1>
+            <p class="section-subtitle">
+              Add your delivery details and confirm your order.
+            </p>
+          </div>
+          <div class="stack-sm text-right">
+            <span class="badge-soft">Encrypted &amp; secure checkout</span>
+            <span class="muted">You’ll receive a confirmation email instantly</span>
+          </div>
+        </header>
+
+        <section class="two-column section">
+          <form class="card-surface" data-checkout-form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  placeholder="Jordan Smith"
+                />
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                  placeholder="+91(ten digit numbers)"
+                />
+              </div>
+              <div class="field">
+                <label for="email">Email (for receipt)</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+              <div class="field">
+                <label for="instructions">Rider note (optional)</label>
+                <input
+                  id="instructions"
+                  name="instructions"
+                  type="text"
+                  placeholder="Gate code, buzzer, or drop-off notes"
+                />
+              </div>
+            </div>
+
+            <div class="mt-md">
+              <div class="field">
+                <label for="address">Delivery address</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  required
+                  placeholder="Street, building, apartment, city"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="mt-md form-grid">
+              <div class="field">
+                <label for="payment">Payment method</label>
+                <select id="payment" name="payment" required>
+                  <option value="">Choose a method</option>
+                  <option value="card">Credit / debit card</option>
+                  <option value="cash">Cash on delivery</option>
+                  <option value="wallet">Digital wallet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="time">Delivery time</label>
+                <select id="time" name="time">
+                  <option value="asap">As soon as possible</option>
+                  <option value="30">In 30 minutes</option>
+                  <option value="60">In 1 hour</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <div class="form-helper">
+                <div>By placing your order, you agree to FoodHub’s terms.</div>
+                <div class="mt-sm">
+                  <a href="cart.html" class="link-muted">Back to cart</a>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary">
+                <span>Place order</span>
+              </button>
+            </div>
+          </form>
+
+          <aside class="card-surface" data-checkout-summary>
+            <div class="stack-sm">
+              <h2 class="section-title">Order summary</h2>
+              <p class="section-subtitle">
+                Double‑check your items and total before placing your order.
+              </p>
+            </div>
+
+            <div class="summary-list mt-md" data-summary-items></div>
+
+            <div class="summary-list mt-md">
+              <div class="summary-row muted">
+                <span>Subtotal</span>
+                <span data-summary-subtotal>$0.00</span>
+              </div>
+              <div class="summary-row muted">
+                <span>Delivery</span>
+                <span data-summary-delivery>$0.00</span>
+              </div>
+              <div class="summary-row muted">
+                <span>Fees</span>
+                <span data-summary-fees>$0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span class="cart-total" data-summary-total>$0.00</span>
+              </div>
+            </div>
+
+            <div class="mt-md form-helper">
+              <div>Tips are optional and can be added when your rider is assigned.</div>
+              <div class="mt-sm">
+                <span class="badge-soft">No surprise fees at the door</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© <span id="year-checkout"></span> FoodHub. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year-checkout").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
