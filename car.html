@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart · FoodHub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand" aria-label="FoodHub home">
+          <div class="brand-mark">
+            <div class="brand-mark-inner">FH</div>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">FoodHub</span>
+            <span class="brand-tagline">Nightly cravings, delivered</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="cart.html" class="nav-cart">
+            <span class="nav-cart-icon">🛒</span>
+            <span>Cart</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <h1 class="section-title">Your cart</h1>
+            <p class="section-subtitle">
+              Review your items, adjust quantities, and continue to checkout.
+            </p>
+          </div>
+          <div class="stack-sm text-right">
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              <span>Live delivery slots available</span>
+            </span>
+            <span class="muted">Minimum order: $10 before delivery</span>
+          </div>
+        </header>
+
+        <section class="two-column section">
+          <div class="card-surface">
+            <div data-cart-list></div>
+          </div>
+
+          <aside class="card-surface">
+            <div class="stack-sm">
+              <h2 class="section-title">Order summary</h2>
+              <p class="section-subtitle" data-cart-items-count>0 items</p>
+            </div>
+
+            <div class="summary-list mt-md">
+              <div class="summary-row muted">
+                <span>Subtotal</span>
+                <span data-summary-subtotal>Calculated at checkout</span>
+              </div>
+              <div class="summary-row muted">
+                <span>Delivery · under 8km</span>
+                <span data-summary-delivery>Included in total</span>
+              </div>
+              <div class="summary-row muted">
+                <span>Service &amp; platform fee</span>
+                <span data-summary-fees>Included in total</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span class="cart-total" data-cart-total>$0.00</span>
+              </div>
+            </div>
+
+            <div class="form-footer mt-md">
+              <div class="form-helper">
+                <div>All prices in USD. Tips for riders are optional at checkout.</div>
+                <div class="mt-sm">
+                  <a href="menu.html" class="link-muted">Continue browsing menu</a>
+                </div>
+              </div>
+              <div class="stack-sm">
+                <a href="checkout.html" class="btn-primary" style="justify-content:center;">
+                  <span>Proceed to checkout</span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© <span id="year-cart"></span> FoodHub. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year-cart").textContent =
+        new Date().getFullYear();
+    </script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
